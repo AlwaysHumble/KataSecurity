@@ -45,7 +45,7 @@ class docker_data_management:
 		Dict={}
 		
 		for line in txt.splitlines():
-			if line[0]!='#' and line[:25]!="engine_daemon_engine_info":		
+			if line[0]!='#' and line[:25]!="engine_daemon_engine_info" and line[:21]!="engine_daemon_network" and line[:19]!="http_requests_total":		
 				sp=line.find(" ")
 				try:
 					Dict[line[:sp]]=float(line[sp+1:])

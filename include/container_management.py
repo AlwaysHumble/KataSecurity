@@ -1,6 +1,7 @@
 import os
 import subprocess
 import time
+import requests
 
 class container_management:
 
@@ -15,6 +16,8 @@ class container_management:
 			os.system("docker run "+args)
 		else:	
 			os.system("docker run --name "+container_name+" "+args)
+		
+		
 		
 		return container_name
 
