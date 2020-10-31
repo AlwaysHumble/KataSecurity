@@ -50,9 +50,6 @@ class container_management:
 		command="bash home/"+test_case_name+"/run.sh"
 		self.exec_commandin_container(container_name,command)
         
-		#Getting output
-		#self.get_filefrom_container(container_name,self.__docker_current_location+output_file_name,output_location+"/"+output_file_name)
-		
 		#deleting the container
 		self.remove_container(container_name)
 		

@@ -6,11 +6,12 @@ import pandas as pd
 import time
 import os
 import sys
+import gc
 
-#There should be about 1609 columns in dataframe
+#There should be about 1541 columns in dataframe
 class docker_data_management:
 	def __init__(self,sleep_time,number_of_iterations):
-		print("Starting Docker Data Management Sytem")
+		print("Starting Docker Data Management Sytem.")
 		
 		#clear data folder to store fresh data
 		self.__setup_data_folder()
@@ -45,7 +46,7 @@ class docker_data_management:
 		Dict={}
 		
 		for line in txt.splitlines():
-			if line[0]!='#' and line[:25]!="engine_daemon_engine_info":		
+			if line[0]!='#' and line[:25]!="engine_daemon_engine_info" and line[:21]!="engine_daemon_network" and line[:19]!="http_requests_total":				
 				sp=line.find(" ")
 				try:
 					Dict[line[:sp]]=float(line[sp+1:])
@@ -84,6 +85,9 @@ class docker_data_management:
 		os.system('mkdir data/docker')
 		os.system('mkdir data/docker/snapshots')
 		
+	def __del__(self):
+		print("Shutting down docker data management.")
+		gc.collect()
 
 		
 #Inititialization of Docker Data Management System
@@ -91,30 +95,4 @@ if __name__ == "__main__":
 	c_dataframe_obj=docker_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by the main.py 
 else:
 	print("Docker Data Management System could not be initialized\nPlease check docker_data_management.py")
-	
-	
-	
-	
-	
-#inside make data
-'''
-for line in txt[:6614].splitlines():
-			if(line[0]!='#'):
-				sp=line.find(" ")
-				Dict[line[:sp]]=float(line[sp+1:])
-
-		for line in txt[7006:].splitlines():
-			if(line[0]!='#'):
-				sp=line.find(" ")
-				Dict[line[:sp]]=float(line[sp+1:])
-
-
-'''
-	
-	
-	
-	
-	
-	
-	
 	

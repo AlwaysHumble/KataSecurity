@@ -6,10 +6,10 @@ import docker
 import time
 import multiprocessing
 import sys
+import gc
 
 		
 class one_container_data_management:
-	
 	
 	def __init__(self,container_object):
 		self.__Dict={}
@@ -206,7 +206,7 @@ class one_container_data_management:
 class all_container_data_management:
 	
 	def __init__(self,sleep_time,number_of_iterations):
-		print("Container Data management started")
+		print("Container Data management started.")
 		os.system('mkdir data/all_containers')
 		self.client=docker.from_env()
 
@@ -227,8 +227,11 @@ class all_container_data_management:
 		for one_container in list_of_all_containers:
 			temp=multiprocessing.Process(target=one_container_data_management,args=(one_container,))
 			temp.start()
-			temp.join()
+			#temp.join()
 			
+	def __del__(self):
+		print("Shutting down container data management.")
+		gc.collect()
 
 #Inititialization of Docker Data Management System
 if __name__ == "__main__":

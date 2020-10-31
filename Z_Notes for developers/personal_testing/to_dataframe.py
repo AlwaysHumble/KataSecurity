@@ -6,7 +6,7 @@ def func(txt):
 	dc={}
 	cnt=0
 	for line in txt.splitlines():
-		if line[0]!='#' and line[:25]!="engine_daemon_engine_info":		
+		if line[0]!='#' and line[:25]!="engine_daemon_engine_info" and line[:21]!="engine_daemon_network" and line[:19]!="http_requests_total":			
 			sp=line.find(" ")
 			try:
 				dc[line[:sp]]=float(line[sp+1:])
@@ -15,9 +15,13 @@ def func(txt):
 			cnt=cnt+1		
 		#print(cnt)
 		#cnt=cnt+1
-	for x in dc:
-		print(x)
 	
+	print(len(dc))
+	'''
+	file=open("len_more_3.txt",'wt')
+	file.write(str(dc)) 
+	file.close() 
+	'''
 	#df=pd.DataFrame([dc])
 	#df.to_csv("data/current.csv",index=False)
 	
