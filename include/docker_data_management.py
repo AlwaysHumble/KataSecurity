@@ -18,7 +18,7 @@ class docker_data_management:
 		
 		#To store current data frame
 		self.all_data=0#default initialization would be changed to dataframe later
-		
+
 		#Make current.csv and all_data.csv
 		self.__get_data(True)
 		
@@ -56,7 +56,7 @@ class docker_data_management:
 				
 		#Making dataframe from dictionary
 		df=pd.DataFrame([Dict])
-		df.to_csv("data/docker/current_docker.csv",index=False)
+		df.to_csv("data/docker/current.csv",index=False)
 		
 		#Saving in snapshot folder
 		current_time=time.strftime("%d %b %Y %H:%M:%S",time.localtime())
@@ -64,7 +64,7 @@ class docker_data_management:
 		
 		#Updating current and all_data csv files
 		if(make_all_data==True):
-			df.to_csv("data/docker/all_data_docker.csv")
+			df.to_csv("data/docker/all_data.csv")
 			self.all_data=df
 			print("Made docker dataset")
 		else:
@@ -78,21 +78,20 @@ class docker_data_management:
 		except:
 			print("Update data frame failed.\nCurrent data frame is not of the shape/format as the previous ones.\nCheck __update_data function in data_management.py")
 			return
-		self.all_data.to_csv("data/docker/all_data_docker.csv",index=False)
+		self.all_data.to_csv("data/docker/all_data.csv",index=False)
 		
 	#Clear data folder to store fresh data	
 	def __setup_data_folder(self):
-		os.system('mkdir data/docker')
-		os.system('mkdir data/docker/snapshots')
+		os.system("mkdir data/docker")
+		os.system("mkdir data/docker/snapshots")
 		
 	def __del__(self):
 		print("Shutting down docker data management.")
 		gc.collect()
 
-		
+	
 #Inititialization of Docker Data Management System
 if __name__ == "__main__":
-	c_dataframe_obj=docker_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by the main.py 
+	docker_management_obj=docker_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by the main.py
 else:
 	print("Docker Data Management System could not be initialized\nPlease check docker_data_management.py")
-	

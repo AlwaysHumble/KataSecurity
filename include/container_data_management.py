@@ -26,7 +26,7 @@ class one_container_data_management:
 	#Rewritten part same as in docker_data_management
 	def __make_dataframe(self,make_all_data):
 		df=pd.DataFrame([self.__Dict])
-		df.to_csv("data/all_containers/"+self.get_attribute_value("name")+"/current_container.csv",index=False)
+		df.to_csv("data/all_containers/"+self.get_attribute_value("name")+"/current.csv",index=False)
 		
 		#Saving in snapshot folder
 		current_time=time.strftime("%d %b %Y %H:%M:%S",time.localtime())
@@ -34,7 +34,7 @@ class one_container_data_management:
 		
 		#Updating current and all_data csv files
 		if(make_all_data==True):
-			df.to_csv("data/all_containers/"+self.get_attribute_value("name")+"/all_data_container.csv")
+			df.to_csv("data/all_containers/"+self.get_attribute_value("name")+"/all_data.csv")
 			self.all_data=df
 			print("Made dataset of "+self.get_attribute_value("name"))
 		else:
@@ -43,7 +43,7 @@ class one_container_data_management:
 	#Rewritten part same as in docker_data_management
 	def __update_data(self,curr):
 		
-		all_data=pd.read_csv("data/all_containers/"+self.get_attribute_value("name")+"/all_data_container.csv")
+		all_data=pd.read_csv("data/all_containers/"+self.get_attribute_value("name")+"/all_data.csv")
 		frames=[all_data,curr]
 		try:
 			self.all_data=pd.concat(frames,sort=True)
@@ -51,7 +51,7 @@ class one_container_data_management:
 			print("Update data frame failed.\nCurrent data frame is not of the shape/format as the previous ones.\nCheck __update_data function in container_data_management.py")
 			return
 		
-		self.all_data.to_csv("data/all_containers/"+self.__Dict["name"]+"/all_data_container.csv",index=False)
+		self.all_data.to_csv("data/all_containers/"+self.__Dict["name"]+"/all_data.csv",index=False)
 		
 	#Rewritten part same as in docker_data_management
 	def __setup_data_folder(self,container_name):
@@ -224,6 +224,7 @@ class all_container_data_management:
 			print("There are no containers running currently")
 			return
 		
+		#No need to terminate the processes
 		for one_container in list_of_all_containers:
 			temp=multiprocessing.Process(target=one_container_data_management,args=(one_container,))
 			temp.start()
@@ -233,12 +234,13 @@ class all_container_data_management:
 		print("Shutting down container data management.")
 		gc.collect()
 
+
 #Inititialization of Docker Data Management System
 if __name__ == "__main__":
-	c_dataframe_obj=all_container_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by the main.py 
+	container_management_obj=all_container_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by 
+	
 else:
 	print("Container Data Management System could not be initialized\nPlease check container_data_management.py")
-	
 	
 	
 	
