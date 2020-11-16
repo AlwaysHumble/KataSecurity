@@ -24,6 +24,28 @@ mem_res=["memory_usage", "memory_max_usage", "memory_active_anon", "memory_activ
 network_res=["networks_rx_bytes", "networks_rx_packets", "networks_rx_errors", "networks_rx_dropped", "networks_tx_bytes", "networks_tx_packets", "networks_tx_errors", "networks_tx_dropped"]
 
 
+def augmentaion(df):
+	vertical=df.shape[0]
+	horizontal=df.shape[1]
+	
+	if vertical<3 or horizontal<2:
+		return NULL
+	
+	new_len=(vertical-1)*10
+	
+	new_df=pd.DataFrame(np.zeros([new_len,horizontal]),columns=list(df.columns))
+	
+	for ind in range(0,vertical-1):
+		for col in range(len(df.columns)):
+			prev=df.iloc[ind,col]
+			nxt=df.iloc[ind+1,col]
+			d=(nxt-prev)/10
+			for i in range(10):
+				new_df.iloc[(ind*10)+i,col]=df.iloc[ind,col]+(d*i)
+				
+	#print(new_df.head(50))
+	return new_df
+
 #Check if there is a need of add change in resource utilized rather than absolute on
 def pre_processing(df):
 	#Removing all columns with no values
@@ -46,6 +68,11 @@ def pre_processing(df):
 	for col in df.columns:
 		df[col]=df[col].astype("float64")
 	
+	#print(df.head(21))
+	#print("------------------------------------------------------------------------------------")
+	
+	df=augmentaion(df)
+	
 	return df
 
 
@@ -53,7 +80,6 @@ train=pd.read_csv("../../data/all_containers/Test_packet_flooder/all_data.csv")
 train=pre_processing(train)
 
 #print(train.info())
-
 
 def train_model(model,X,y,loss_fn,optimizer,iterations=100,print_every=50,lr=0.001):
 	optimizer.lr = lr
@@ -141,7 +167,6 @@ class model_2(nn.Module):
 def nll_loss(observations, dists):
 	return -dists.log_prob(observations).sum()
 	
-
 #model=ml_model(train.shape)
 model=model_2(train.shape)
 adam = optim.Adam(params=model.parameters(), lr=0.01)
