@@ -23,7 +23,7 @@ class model:
 		for x in train_df.columns:
 			try:
 				train_df[x]=pd.to_numeric(train_df[x])
-				self.__bounds_dict[x]=(train_df[x].min()-1,train_df[x].min(),train_df[x].max(),train_df[x].max()+1)
+				self.__bounds_dict[x]=(train_df[x].min(),train_df[x].max())
 			except:
 				continue
 		
