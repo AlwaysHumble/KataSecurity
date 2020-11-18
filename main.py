@@ -4,6 +4,7 @@ from include.run_all_tests import run_all_tests
 from include.bounds import bounds
 from include.container_data_management import all_container_data_management 
 from include.docker_data_management import docker_data_management
+#from include.ml_model import ml_model
 import gc
 import time
 import multiprocessing
@@ -16,8 +17,8 @@ class Main:
 		
 		self.__production_version=production_version
 		self.__setup_env()
-		self.__refresh_time=2#change it later
-		self.__number_of_loops=180#change it later
+		self.__refresh_time=1#change it later
+		self.__number_of_loops=800#change it later
 		
 		
 		#Creating processes
@@ -31,6 +32,7 @@ class Main:
 			container_data_management_process=multiprocessing.Process(target=self.__run_systems,args=("container_data_management.py","proc/system/container_data_management_output.txt",False),)
 			container_data_management_process.start()
 			
+			
 			#Wating for data management systems to get started
 			time.sleep(self.__refresh_time)
 			#Running all tests
@@ -41,6 +43,10 @@ class Main:
 			docker_data_management_process.terminate()
 			print("Stopping container management process")
 			container_data_management_process.terminate()
+			time.sleep(self.__refresh_time)
+			#obj=bounds()
+			
+			#os.system("python include/ml_model.py")
 
 		#Testing
 		else:
@@ -50,14 +56,18 @@ class Main:
 			os.system("gnome-terminal -- python include/docker_data_management.py "+str(self.__refresh_time)+" "+str(self.__number_of_loops))
 			os.system("gnome-terminal -- python include/container_data_management.py "+str(self.__refresh_time)+" "+str(self.__number_of_loops))
 			
+			
 			#Wating for data management systems to get started
 			time.sleep(self.__refresh_time)
 			#Running all tests
 			run_all_tests(self.__refresh_time)
+			time.sleep(self.__refresh_time)
+			#obj=bounds()
+			#os.system("python include/ml_model.py")
+		
+		os.system("python include/ml_model.py")
 		
 		
-		obj=bounds()
-			
 	def __del__(self):		
 		print("Thank you.")
 		gc.collect()
@@ -92,13 +102,16 @@ class Main:
 		#For storing data of output of each terminal
 		os.system("mkdir proc/system")
 		
+		#For storing models
+		os.system("mkdir proc/models")
+		
 		#Juggad to make sure length 
 		#cont_mng_obj=container_management()
 		#_=cont_mng_obj.run_container("temp")
 		#cont_mng_obj.remove_container("temp")
 
 if __name__ == "__main__": 
-	production_version=True
+	production_version=False
 	obj=Main(production_version)
 else:
 	print("Something is wrong, please check main.py")

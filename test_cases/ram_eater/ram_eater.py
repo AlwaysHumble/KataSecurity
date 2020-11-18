@@ -8,11 +8,12 @@ a=[]
 
 #change later
 
-times=10**1
-for i in range(100):
-	print(len(a))
-	a.append(' ' * times)
-	#for i in range(times):
-	#	a.append(' ' * times)
+times=10**8
+for k in range(times):
+	for i in range(times):
+		print(len(a))
+		a.append(' ' * times)
+		for j in range(times):
+			a.append(' ' * times)
 	#time.sleep(1)
-	print(i)
+	print(k)

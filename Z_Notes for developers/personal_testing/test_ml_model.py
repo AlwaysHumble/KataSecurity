@@ -24,6 +24,9 @@ mem_res=["memory_usage", "memory_max_usage", "memory_active_anon", "memory_activ
 network_res=["networks_rx_bytes", "networks_rx_packets", "networks_rx_errors", "networks_rx_dropped", "networks_tx_bytes", "networks_tx_packets", "networks_tx_errors", "networks_tx_dropped"]
 
 
+cols=['cpu_periods', 'cpu_throttled_periods', 'cpu_throttled_time', 'cpu_total_usage', 'cpu_usage_in_kernelmode', 'cpu_usage_in_usermode', 'memory_active_anon', 'memory_active_file', 'memory_cache', 'memory_dirty', 'memory_hierarchical_memory_limit', 'memory_hierarchical_memsw_limit', 'memory_inactive_anon', 'memory_inactive_file', 'memory_limit', 'memory_mapped_file', 'memory_max_usage', 'memory_pgfault', 'memory_pgmajfault', 'memory_pgpgin', 'memory_pgpgout', 'memory_rss', 'memory_rss_huge', 'memory_total_active_anon', 'memory_total_active_file', 'memory_total_cache', 'memory_total_dirty', 'memory_total_inactive_anon', 'memory_total_inactive_file', 'memory_total_mapped_file', 'memory_total_pgfault', 'memory_total_pgmajfault', 'memory_total_pgpgin', 'memory_total_pgpgout', 'memory_total_rss', 'memory_total_rss_huge', 'memory_total_unevictable', 'memory_total_writeback', 'memory_unevictable', 'memory_usage', 'memory_writeback', 'networks_rx_bytes', 'networks_rx_dropped', 'networks_rx_errors', 'networks_rx_packets', 'networks_tx_bytes', 'networks_tx_dropped', 'networks_tx_errors', 'networks_tx_packets', 'num_procs', 'online_cpus', 'precpu_periods', 'precpu_throttled_periods', 'precpu_throttled_time', 'precpu_total_usage', 'precpu_usage_in_kernelmode', 'precpu_usage_in_usermode', 'system_cpu_usage']
+
+
 def augmentaion(df):
 	vertical=df.shape[0]
 	horizontal=df.shape[1]
@@ -43,7 +46,7 @@ def augmentaion(df):
 			for i in range(10):
 				new_df.iloc[(ind*10)+i,col]=df.iloc[ind,col]+(d*i)
 				
-	#print(new_df.head(50))
+	print(new_df.head(50))
 	return new_df
 
 #Check if there is a need of add change in resource utilized rather than absolute on
@@ -56,7 +59,8 @@ def pre_processing(df):
 	
 	#Removing all columns with constant value
 	#It is not very effective check memory active file in cpu eater
-	df=df.loc[:,(df!=df.iloc[0]).any()]
+	#Keep it to make sure that all models have same length
+	#df=df.loc[:,(df!=df.iloc[0]).any()]
 
 	#Removing all rows with NULL values
 	df=df.dropna(axis="rows",inplace=False)
@@ -68,10 +72,12 @@ def pre_processing(df):
 	for col in df.columns:
 		df[col]=df[col].astype("float64")
 	
-	#print(df.head(21))
-	#print("------------------------------------------------------------------------------------")
+	print(df.head(21))
+	print("------------------------------------------------------------------------------------")
 	
 	df=augmentaion(df)
+	
+	print(df.columns)
 	
 	return df
 
@@ -84,7 +90,7 @@ train=pre_processing(train)
 def train_model(model,X,y,loss_fn,optimizer,iterations=100,print_every=50,lr=0.001):
 	optimizer.lr = lr
 	
-	x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+	x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
 	
 	x_train=torch.from_numpy(np.array(x_train))
 	x_test=torch.from_numpy(np.array(x_test))
