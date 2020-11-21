@@ -7,7 +7,7 @@ class container_management:
 	def __init__(self):
 		print("Running container management")
 		self.__docker_current_location="home"
-		os.system("mkdir proc/containers")
+		#os.system("mkdir proc/containers")
 		
 	#Detach the container after running it
 	def run_container(self,container_name="Default",args="-d -it ubuntu"):

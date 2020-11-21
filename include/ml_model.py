@@ -48,7 +48,7 @@ def augmentaion(df):
 			for i in range(10):
 				new_df.iloc[(ind*10)+i,col]=df.iloc[ind,col]+(d*i)
 				
-	#print(new_df.head(50))
+
 	return new_df
 
 #Check if there is a need of add change in resource utilized rather than absolute on
@@ -58,11 +58,6 @@ def pre_processing(df):
 	
 	#Removing name, id, pids_stats and first column which are not useful for running ML algorithms
 	df=df.drop([df.columns[0],"name","id","pids_stats"],axis=1,inplace=False)
-	
-	#Removing all columns with constant value
-	#It is not very effective check memory active file in cpu eater
-	#Keep it to make sure that all models have same length
-	#df=df.loc[:,(df!=df.iloc[0]).any()]
 
 	#Removing all rows with NULL values
 	df=df.dropna(axis="rows",inplace=False)
@@ -74,20 +69,53 @@ def pre_processing(df):
 	for col in df.columns:
 		df[col]=df[col].astype("float64")
 	
-	#print(df.head(21))
-	#print("------------------------------------------------------------------------------------")
-	
 	df=augmentaion(df)
-	
-	#print(df.columns)
-	
 	return df
 
+from sklearn.linear_model import LinearRegression
+def train_model(model,model_name,X,y):	
+	
+	#x_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.25,random_state=1) 
+	
+	model.fit(X,y)#x_train, y_train)
+	#pred=model.predict(x_test)
+	#print(pred)
+	with open(model_name, 'wb') as file:  
+		pickle.dump(model, file)
+	
+	#return x_test
 
 
 
-#print(train.info())
+if __name__=="__main__":
+	
+	all_tests=os.listdir("data/all_containers")
+	for test_case_name in all_tests:
+		print("Building model for test case "+test_case_name)
+		model_case="proc/models/model_"+str(test_case_name[5:])
+		os.system("mkdir "+model_case)
+		
+		train=pd.read_csv("data/all_containers/"+test_case_name+"/all_data.csv")
+		train=pre_processing(train)
+		
+		#model=model_2(train.shape)
+		#adam = optim.Adam(params=model.parameters(), lr=0.01)
+		
+		for col in train.columns:
+			model=LinearRegression()
+			y=train[col]
+			ll=[x for x in train.columns if x!=col]
+			X=train[ll]
+			model_name=model_case+"/"+str(test_case_name[5:])+"_"+col+".pkl"
+			#print("Loss of ",col)
+			train_model(model,model_name,X,y)
+		
+		
+else:
+	print("ML model building could not run.\nCheck ml_model.py for more details")
 
+
+'''
 def train_model(model,model_name,X,y,loss_fn,optimizer,iterations=100,print_every=50,lr=0.001):
 	optimizer.lr = lr
 	
@@ -120,7 +148,7 @@ def train_model(model,model_name,X,y,loss_fn,optimizer,iterations=100,print_ever
 	with open(model_name, 'wb') as file:  
 		pickle.dump(model, file)
 
-'''
+
 class ml_model(nn.Module):
 	def __init__(self,shape):
 		vertical=shape[0]
@@ -145,7 +173,7 @@ class ml_model(nn.Module):
         
 		norm_dist = torch.distributions.Normal(mean,std)
 		return norm_dist
-'''
+
 	
 class model_2(nn.Module):
 	def __init__(self,shape):
@@ -198,7 +226,7 @@ if __name__=="__main__":
 		for col in train.columns:
 			y=train[col]
 			X=train.drop([col],axis="columns",inplace=False)
-			model_name=model_case+"/"+str(test_case_name[5:])+"_"+col
+			model_name=model_case+"/"+str(test_case_name[5:])+"_"+col+".pkl"
 			#print("Loss of ",col)
 			train_model(model,model_name,X,y, nll_loss, adam, iterations=50, print_every=50)
 		
@@ -206,7 +234,7 @@ if __name__=="__main__":
 else:
 	print("ML model building could not run.\nCheck ml_model.py for more details")
 
-
+'''
 
 
 

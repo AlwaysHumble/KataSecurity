@@ -15,8 +15,8 @@ class bounds:
 		os.system("rm -rf proc/bounds")
 		os.system("mkdir proc/bounds")
 		
-		os.system("rm -rf proc/models")
-		os.system("mkdir proc/models")
+		#os.system("rm -rf proc/models")
+		#os.system("mkdir proc/models")
 	
 		docker_df=pd.read_csv("data/docker/all_data.csv")
 		

@@ -207,7 +207,7 @@ class all_container_data_management:
 	
 	def __init__(self,sleep_time,number_of_iterations):
 		print("Container Data management started.")
-		os.system('mkdir data/all_containers')
+		#os.system('mkdir data/all_containers')
 		self.client=docker.from_env()
 
 		#only gets running containers

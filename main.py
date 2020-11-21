@@ -4,7 +4,7 @@ from include.run_all_tests import run_all_tests
 from include.bounds import bounds
 from include.container_data_management import all_container_data_management 
 from include.docker_data_management import docker_data_management
-#from include.ml_model import ml_model
+from include.deploy import deploy
 import gc
 import time
 import multiprocessing
@@ -14,11 +14,12 @@ class Main:
 	
 	#Default is set for testing phase
 	def __init__(self,production_version=False):
+		self.__refresh_time=1#change it later
+		self.__number_of_loops=5000#change it later
 		
 		self.__production_version=production_version
 		self.__setup_env()
-		self.__refresh_time=1#change it later
-		self.__number_of_loops=800#change it later
+		
 		
 		
 		#Creating processes
@@ -46,7 +47,7 @@ class Main:
 			time.sleep(self.__refresh_time)
 			#obj=bounds()
 			
-			#os.system("python include/ml_model.py")
+			os.system("python include/ml_model.py")
 
 		#Testing
 		else:
@@ -63,14 +64,20 @@ class Main:
 			run_all_tests(self.__refresh_time)
 			time.sleep(self.__refresh_time)
 			#obj=bounds()
-			#os.system("python include/ml_model.py")
+			os.system("python include/ml_model.py")
 		
-		os.system("python include/ml_model.py")
+		#os.system("python include/ml_model.py")
+		#os.system("python include/deploy.py")
 		
+		#container_data_management_process=multiprocessing.Process(target=self.__run_systems,args=("container_data_management.py","proc/system/container_data_management_output.txt",False),)
+		#container_data_management_process.start()
+		#os.system("gnome-terminal -- python include/container_data_management.py "+str(self.__refresh_time)+" "+str(self.__number_of_loops))
+		time.sleep(2)
+		deploy(1)
 		
 	def __del__(self):		
 		print("Thank you.")
-		gc.collect()
+		#gc.collect()
 		
 	def __run_systems(self,file_location,output_location,fl):
 		#print("Started "+file_location[:len(file_location)-3])
@@ -94,6 +101,8 @@ class Main:
 		#For data management
 		os.system('rm -rf data')
 		os.system('mkdir data')
+		os.system('mkdir data/all_containers')
+		os.system('mkdir data/docker')		
 		
 		#For temperary variables and their output
 		os.system("rm -rf proc")
@@ -104,6 +113,9 @@ class Main:
 		
 		#For storing models
 		os.system("mkdir proc/models")
+		
+		#For storing models
+		os.system("mkdir proc/containers")
 		
 		#Juggad to make sure length 
 		#cont_mng_obj=container_management()
