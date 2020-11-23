@@ -3,17 +3,13 @@
 print("Running RAM eater")
 
 import time
+import os
+import multiprocessing
 
-a=[]
-
-#change later
-
-times=10**8
-for k in range(times):
-	for i in range(times):
-		print(len(a))
-		a.append(' ' * times)
-		for j in range(times):
-			a.append(' ' * times)
-	#time.sleep(1)
-	print(k)
+def func(dur):
+	os.system("stress --vm 1 --timeout 12s --vm-bytes 824M")#1024M
+	
+for _ in range(6):
+	process=multiprocessing.Process(target=func,args=(1,),)
+	process.start()
+	time.sleep(3)

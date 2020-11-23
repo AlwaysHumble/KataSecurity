@@ -11,19 +11,21 @@ print("Running packet flooder")
 #increase later
 def pinger():
 	#add sudo -S before ping if want to run host rather than docker
-	os.system("echo Password | ping -f netflix.com -c 25000")
+	os.system("ping -f netflix.com -c 15000")
 
 parent_process=multiprocessing.Process(target=pinger)
 parent_process.start()
 
-for x in range(24):
-	temp_thread=multiprocessing.Process(target=pinger)
-	temp_thread.start()	
-	time.sleep(1)
-	
+for x in range(44):
+	temp_process=multiprocessing.Process(target=pinger)
+	temp_process.start()
+	if(x%4==0):
+		time.sleep(2)
+
+print("network testing done")
+		
 def put_stress(dur):
 	os.system("stress --vm 1 --timeout "+str(dur)+"s")
-
 
 dur=25
 process_1=multiprocessing.Process(target=put_stress,args=(dur,),)
@@ -55,18 +57,24 @@ process_7=multiprocessing.Process(target=put_stress,args=(dur,),)
 process_7.start()
 time.sleep(3)
 
+print("cpu testing done")
 
-a=[]
+def func(dur):
+	os.system("stress --vm 1 --timeout 12s --vm-bytes 1024M")
+	
+for _ in range(4):
+	process=multiprocessing.Process(target=func,args=(1,),)
+	process.start()
+	time.sleep(3)
 
-#change later
+print("ram testing done")
 
-times=10**11
+def func(dur):
+	os.system("stress --io 6 --timeout 40s")
+	
+for _ in range(10):
+	process=multiprocessing.Process(target=func,args=(1,),)
+	process.start()
+	time.sleep(3)
 
-for k in range(times):
-	for i in range(times):
-		print(len(a))
-		a.append(' ' * times)
-		for j in range(times):
-			a.append(' ' * times)
-	print(k)
-
+print("io testing done")

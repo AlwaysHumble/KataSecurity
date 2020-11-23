@@ -27,7 +27,7 @@ class container_management:
 		os.system("docker cp "+container_name+":/"+host_file_address+" "+target_file_address)
 
 	def exec_commandin_container(self,container_name,command):
-		os.system("docker exec -it "+container_name+" "+command+" > proc/containers/"+container_name+"_output.txt")
+		os.system("docker exec -u 0 -it "+container_name+" "+command+" > proc/containers/"+container_name+"_output.txt")
 
 	#For stopping and removing a container
 	#container id can also passed in place of container name

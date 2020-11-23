@@ -65,7 +65,7 @@ def predict(df):
 		if total_loss > 18:
 			#print("red flag in "+col)(
 			red_flags=red_flags+1
-		elif total_loss > 16.31:#.31
+		elif total_loss > 16.5:#.31
 			#print("orange flag in "+col)
 			orange_flags=orange_flags+1
 			
@@ -100,16 +100,16 @@ def deploy(sleep_time):
 	#use current.csv to get latest data and use it for detection
 	loc="data/all_containers/Test_bada_case"
 	
-	for _ in range(2):
+	for _ in range(3):
 		train=get_current_matrice(loc)
 		time.sleep(sleep_time)
 		#print(train.info())
 	
-	#return
 	for _ in range(200):
 		train=get_current_matrice(loc)
 		predict(train)
 		time.sleep(sleep_time)
+		
 		
 #deploy(1)
 

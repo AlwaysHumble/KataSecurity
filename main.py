@@ -16,11 +16,10 @@ class Main:
 	def __init__(self,production_version=False):
 		self.__refresh_time=1#change it later
 		self.__number_of_loops=5000#change it later
-		
+		#'''
 		self.__production_version=production_version
 		self.__setup_env()
-		
-		
+			
 		
 		#Creating processes
 		if(production_version):
@@ -66,6 +65,7 @@ class Main:
 			#obj=bounds()
 			os.system("python include/ml_model.py")
 		
+		#'''
 		#os.system("python include/ml_model.py")
 		#os.system("python include/deploy.py")
 		
@@ -117,10 +117,6 @@ class Main:
 		#For storing models
 		os.system("mkdir proc/containers")
 		
-		#Juggad to make sure length 
-		#cont_mng_obj=container_management()
-		#_=cont_mng_obj.run_container("temp")
-		#cont_mng_obj.remove_container("temp")
 
 if __name__ == "__main__": 
 	production_version=False
