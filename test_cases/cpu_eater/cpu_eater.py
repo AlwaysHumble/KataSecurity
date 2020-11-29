@@ -16,7 +16,7 @@ process_1=multiprocessing.Process(target=put_stress,args=(dur,),)
 process_1.start()
 time.sleep(5)
 
-
+exit()
 process_2=multiprocessing.Process(target=put_stress,args=(dur,),)
 process_2.start()
 time.sleep(5)

@@ -5,9 +5,9 @@ import multiprocessing
 print("Running io flooder")
 
 def func(dur):
-	os.system("stress --io 6 --timeout 40s")
+	os.system("stress --io 6 --timeout 40s")#40s
 	
-for _ in range(10):
+for _ in range(1):#10
 	process=multiprocessing.Process(target=func,args=(1,),)
 	process.start()
 	time.sleep(3)

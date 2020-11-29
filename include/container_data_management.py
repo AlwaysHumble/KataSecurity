@@ -240,7 +240,8 @@ if __name__ == "__main__":
 	container_management_obj=all_container_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by 
 	
 else:
-	print("Container Data Management System could not be initialized\nPlease check container_data_management.py")
+	print("")
+	#print("Container Data Management System could not be initialized\nPlease check container_data_management.py")
 	
 	
 	

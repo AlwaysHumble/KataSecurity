@@ -1,0 +1,218 @@
+0% [Working]0% [Connected to archive.ubuntu.com (91.189.88.152)] [Connecting to security.ub                                                                               Get:1 http://archive.ubuntu.com/ubuntu focal InRelease [265 kB]
+                                                                               0% [1 InRelease 0 B/265 kB 0%] [Waiting for headers]                                                    Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [109 kB]
+0% [1 InRelease 25.4 kB/265 kB 10%] [2 InRelease 0 B/109 kB 0%]                                                               0% [2 InRelease 62.5 kB/109 kB 57%]                                   Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+0% [3 InRelease 0 B/114 kB 0%] [2 InRelease 88.2 kB/109 kB 81%]                                                               0% [2 InRelease 99.7 kB/109 kB 91%]                                   0% [Waiting for headers]                        Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [101 kB]
+0% [4 InRelease 0 B/101 kB 0%]                              0% [Working]0% [Working]0% [Working]            Get:5 http://archive.ubuntu.com/ubuntu focal/restricted amd64 Packages [33.4 kB]
+0% [5 Packages 0 B/33.4 kB 0%]                              0% [Working]0% [5 Packages store 0 B] [Waiting for headers]                                               0% [Waiting for headers]                        Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [11.3 MB]
+0% [6 Packages 0 B/11.3 MB 0%]0% [6 Packages 892 kB/11.3 MB 8%]0% [6 Packages 3833 kB/11.3 MB 34%]0% [6 Packages 5499 kB/11.3 MB 48%]                                   Get:7 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [643 kB]
+0% [6 Packages 5505 kB/11.3 MB 49%] [7 Packages 0 B/643 kB 0%]58% [6 Packages 8342 kB/11.3 MB 74%] [7 Packages 241 kB/643 kB 38%]73% [6 Packages 11.1 MB/11.3 MB 98%] [7 Packages 641 kB/643 kB 100%]                                                                    73% [6 Packages 11.1 MB/11.3 MB 98%]73% [7 Packages store 0 B] [6 Packages 11.1 MB/11.3 MB 98%]74% [7 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 Packages [1275 kB]
+75% [7 Packages store 0 B] [8 Packages 22.0 kB/1275 kB 2%] [Waiting for headers                                                                               78% [8 Packages 552 kB/1275 kB 43%] [Waiting for headers]78% [6 Packages store 0 B] [8 Packages 552 kB/1275 kB 43%] [Waiting for headers                                                                               81% [6 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:9 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [177 kB]
+81% [6 Packages store 0 B] [9 Packages 22.2 kB/177 kB 13%] [Waiting for headers                                                                               82% [6 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:10 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [30.4 kB]
+82% [6 Packages store 0 B] [10 Packages 0 B/30.4 kB 0%] [Waiting for headers]                                                                             82% [6 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:11 http://archive.ubuntu.com/ubuntu focal-updates/restricted amd64 Packages [126 kB]
+82% [6 Packages store 0 B] [11 Packages 9138 B/126 kB 7%] [Waiting for headers]                                                                               83% [6 Packages store 0 B] [Waiting for headers] [Waiting for headers]                                                                      Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [850 kB]
+83% [6 Packages store 0 B] [12 Packages 40.1 kB/850 kB 5%] [Waiting for headers                                                                               Get:13 http://security.ubuntu.com/ubuntu focal-security/restricted amd64 Packages [89.4 kB]
+86% [6 Packages store 0 B] [12 Packages 614 kB/850 kB 72%] [13 Packages 0 B/89.87% [6 Packages store 0 B] [Waiting for headers] [13 Packages 74.0 kB/89.4 kB 8                                                                               Get:14 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [871 kB]
+87% [6 Packages store 0 B] [14 Packages 16.8 kB/871 kB 2%] [13 Packages 74.0 kB88% [6 Packages store 0 B] [14 Packages 105 kB/871 kB 12%] [Waiting for headers                                                                               Get:15 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [466 kB]
+88% [6 Packages store 0 B] [14 Packages 105 kB/871 kB 12%] [15 Packages 3003 B/94% [6 Packages store 0 B] [Waiting for headers] [15 Packages 429 kB/466 kB 92%                                                                               Get:16 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [4248 B]
+                                                                               94% [6 Packages store 0 B] [15 Packages 429 kB/466 kB 92%]94% [6 Packages store 0 B] [Waiting for headers]                   2674 kB/s 0s                                                                               Get:17 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [1165 B]
+94% [6 Packages store 0 B]                                         2674 kB/s 0s94% [6 Packages store 0 B]                                         2674 kB/s 0s94% [Working]                                                      2674 kB/s 0s94% [8 Packages store 0 B]                                         2674 kB/s 0s95% [Working]                                                      2674 kB/s 0s95% [9 Packages store 0 B]                                         2674 kB/s 0s96% [Working]                                                      2674 kB/s 0s96% [10 Packages store 0 B]                                        2674 kB/s 0s96% [Working]                                                      2674 kB/s 0s96% [11 Packages store 0 B]                                        2674 kB/s 0s97% [Working]                                                      2674 kB/s 0s97% [12 Packages store 0 B]                                        2674 kB/s 0s97% [Working]                                                      2674 kB/s 0s97% [13 Packages store 0 B]                                        2674 kB/s 0s98% [Working]                                                      2674 kB/s 0s98% [14 Packages store 0 B]                                        2674 kB/s 0s98% [Working]                                                      2674 kB/s 0s98% [16 Packages store 0 B]                                        2674 kB/s 0s99% [Working]                                                      2674 kB/s 0s99% [15 Packages store 0 B]                                        2674 kB/s 0s99% [Working]                                                      2674 kB/s 0s99% [17 Packages store 0 B]                                        2674 kB/s 0s100% [Working]                                                     2674 kB/s 0s                                                                               Fetched 16.5 MB in 7s (2291 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 27%Reading package lists... 78%Reading package lists... 78%Reading package lists... 79%Reading package lists... 79%Reading package lists... 80%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 28%Reading package lists... 78%Reading package lists... 78%Reading package lists... 79%Reading package lists... 79%Reading package lists... 80%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 94%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  libcap2 libcap2-bin libpam-cap
+The following NEW packages will be installed:
+  iputils-ping libcap2 libcap2-bin libpam-cap
+0 upgraded, 4 newly installed, 0 to remove and 25 not upgraded.
+Need to get 90.5 kB of archives.
+After this operation, 333 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libcap2 amd64 1:2.32-1 [15.9 kB]
+0% [1 libcap2 0 B/15.9 kB 0%]                             19% [Working]             Get:2 http://archive.ubuntu.com/ubuntu focal/main amd64 libcap2-bin amd64 1:2.32-1 [26.2 kB]
+19% [2 libcap2-bin 0 B/26.2 kB 0%]                                  47% [Working]             Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 iputils-ping amd64 3:20190709-3 [40.1 kB]
+49% [3 iputils-ping 1822 B/40.1 kB 5%]                                      88% [Working]             Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 libpam-cap amd64 1:2.32-1 [8352 B]
+91% [4 libpam-cap 4262 B/8352 B 51%]                                    100% [Working]              Fetched 90.5 kB in 2s (57.2 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libcap2:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4122 files and directories currently installed.)
+Preparing to unpack .../libcap2_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2:amd64 (1:2.32-1) ...
+Selecting previously unselected package libcap2-bin.
+Preparing to unpack .../libcap2-bin_1%3a2.32-1_amd64.deb ...
+Unpacking libcap2-bin (1:2.32-1) ...
+Selecting previously unselected package iputils-ping.
+Preparing to unpack .../iputils-ping_3%3a20190709-3_amd64.deb ...
+Unpacking iputils-ping (3:20190709-3) ...
+Selecting previously unselected package libpam-cap:amd64.
+Preparing to unpack .../libpam-cap_1%3a2.32-1_amd64.deb ...
+Unpacking libpam-cap:amd64 (1:2.32-1) ...
+Setting up libcap2:amd64 (1:2.32-1) ...
+Setting up libcap2-bin (1:2.32-1) ...
+Setting up libpam-cap:amd64 (1:2.32-1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up iputils-ping (3:20190709-3) ...
+Failed to set capabilities on file `/bin/ping' (Operation not supported)
+The value of the capability argument is not permitted for a file. Or the file is not a regular (non-symlink) file
+Setcap failed on /bin/ping, falling back to setuid
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 28%Reading package lists... 78%Reading package lists... 78%Reading package lists... 79%Reading package lists... 79%Reading package lists... 80%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 33%Reading state information... Done
+The following additional packages will be installed:
+  file libexpat1 libmagic-mgc libmagic1 libmpdec2 libpython3-stdlib
+  libpython3.8-minimal libpython3.8-stdlib libreadline8 libsqlite3-0 libssl1.1
+  mime-support python3-minimal python3.8 python3.8-minimal readline-common
+  xz-utils
+Suggested packages:
+  python3-doc python3-tk python3-venv python3.8-venv python3.8-doc binutils
+  binfmt-support readline-doc
+The following NEW packages will be installed:
+  file libexpat1 libmagic-mgc libmagic1 libmpdec2 libpython3-stdlib
+  libpython3.8-minimal libpython3.8-stdlib libreadline8 libsqlite3-0 libssl1.1
+  mime-support python3 python3-minimal python3.8 python3.8-minimal
+  readline-common xz-utils
+0 upgraded, 18 newly installed, 0 to remove and 25 not upgraded.
+Need to get 7372 kB of archives.
+After this operation, 32.7 MB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libssl1.1 amd64 1.1.1f-1ubuntu2 [1318 kB]
+0% [1 libssl1.1 0 B/1318 kB 0%]1% [1 libssl1.1 91.1 kB/1318 kB 7%]5% [1 libssl1.1 437 kB/1318 kB 33%]8% [1 libssl1.1 729 kB/1318 kB 55%]12% [1 libssl1.1 1075 kB/1318 kB 82%]                                     15% [Working]             Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-minimal amd64 3.8.5-1~20.04 [714 kB]
+15% [2 libpython3.8-minimal 0 B/714 kB 0%]20% [2 libpython3.8-minimal 380 kB/714 kB 53%]                                              24% [Working]             Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 libexpat1 amd64 2.2.9-1build1 [73.3 kB]
+24% [3 libexpat1 1855 B/73.3 kB 3%]                                   26% [Working]             Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8-minimal amd64 3.8.5-1~20.04 [1898 kB]
+26% [4 python3.8-minimal 8246 B/1898 kB 0%]30% [4 python3.8-minimal 380 kB/1898 kB 20%]34% [4 python3.8-minimal 678 kB/1898 kB 36%]37% [4 python3.8-minimal 978 kB/1898 kB 52%]41% [4 python3.8-minimal 1346 kB/1898 kB 71%]                       569 kB/s 6s46% [4 python3.8-minimal 1789 kB/1898 kB 94%]                       569 kB/s 6s48% [Working]                                                       569 kB/s 5s                                                                               Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-minimal amd64 3.8.2-0ubuntu2 [23.6 kB]
+48% [5 python3-minimal 3033 B/23.6 kB 13%]                          569 kB/s 5s49% [Working]                                                       569 kB/s 5s                                                                               Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 mime-support all 3.64ubuntu1 [30.6 kB]
+49% [6 mime-support 7752 B/30.6 kB 25%]                             569 kB/s 5s51% [Working]                                                       569 kB/s 5s                                                                               Get:7 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpdec2 amd64 2.4.2-3 [81.1 kB]
+51% [7 libmpdec2 8290 B/81.1 kB 10%]                                569 kB/s 5s53% [Working]                                                       569 kB/s 5s                                                                               Get:8 http://archive.ubuntu.com/ubuntu focal/main amd64 readline-common all 8.0-4 [53.5 kB]
+53% [8 readline-common 5417 B/53.5 kB 10%]                          569 kB/s 5s54% [Working]                                                       569 kB/s 5s                                                                               Get:9 http://archive.ubuntu.com/ubuntu focal/main amd64 libreadline8 amd64 8.0-4 [131 kB]
+54% [9 libreadline8 4478 B/131 kB 3%]                               569 kB/s 5s57% [Working]                                                       569 kB/s 5s                                                                               Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsqlite3-0 amd64 3.31.1-4ubuntu0.2 [549 kB]
+57% [10 libsqlite3-0 16.1 kB/549 kB 3%]                             569 kB/s 5s64% [Working]                                                       569 kB/s 4s                                                                               Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpython3.8-stdlib amd64 3.8.5-1~20.04 [1671 kB]
+64% [11 libpython3.8-stdlib 28.2 kB/1671 kB 2%]                     569 kB/s 4s77% [11 libpython3.8-stdlib 1188 kB/1671 kB 71%]                    569 kB/s 2s83% [Working]                                                       569 kB/s 1s                                                                               Get:12 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3.8 amd64 3.8.5-1~20.04 [373 kB]
+83% [12 python3.8 15.9 kB/373 kB 4%]                                569 kB/s 1s88% [Working]                                                       569 kB/s 0s                                                                               Get:13 http://archive.ubuntu.com/ubuntu focal/main amd64 libpython3-stdlib amd64 3.8.2-0ubuntu2 [7068 B]
+                                                                               Get:14 http://archive.ubuntu.com/ubuntu focal/main amd64 python3 amd64 3.8.2-0ubuntu2 [47.6 kB]
+90% [14 python3 11.9 kB/47.6 kB 25%]                                569 kB/s 0s91% [Working]                                                       569 kB/s 0s                                                                               Get:15 http://archive.ubuntu.com/ubuntu focal/main amd64 libmagic-mgc amd64 1:5.38-4 [218 kB]
+91% [15 libmagic-mgc 22.5 kB/218 kB 10%]                            569 kB/s 0s95% [Working]                                                       569 kB/s 0s                                                                               Get:16 http://archive.ubuntu.com/ubuntu focal/main amd64 libmagic1 amd64 1:5.38-4 [75.9 kB]
+95% [16 libmagic1 21.2 kB/75.9 kB 28%]                              569 kB/s 0s97% [Working]                                                       569 kB/s 0s                                                                               Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 file amd64 1:5.38-4 [23.3 kB]
+97% [17 file 13.6 kB/23.3 kB 58%]                                   569 kB/s 0s98% [Working]                                                       569 kB/s 0s                                                                               Get:18 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 xz-utils amd64 5.2.4-1ubuntu1 [82.5 kB]
+98% [18 xz-utils 11.4 kB/82.5 kB 14%]                               569 kB/s 0s100% [Working]                                                      569 kB/s 0s                                                                               Fetched 7372 kB in 8s (897 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package libssl1.1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4159 files and directories currently installed.)
+Preparing to unpack .../libssl1.1_1.1.1f-1ubuntu2_amd64.deb ...
+Unpacking libssl1.1:amd64 (1.1.1f-1ubuntu2) ...
+Selecting previously unselected package libpython3.8-minimal:amd64.
+Preparing to unpack .../libpython3.8-minimal_3.8.5-1~20.04_amd64.deb ...
+Unpacking libpython3.8-minimal:amd64 (3.8.5-1~20.04) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../libexpat1_2.2.9-1build1_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.9-1build1) ...
+Selecting previously unselected package python3.8-minimal.
+Preparing to unpack .../python3.8-minimal_3.8.5-1~20.04_amd64.deb ...
+Unpacking python3.8-minimal (3.8.5-1~20.04) ...
+Setting up libssl1.1:amd64 (1.1.1f-1ubuntu2) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 76.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.30.0 /usr/local/share/perl/5.30.0 /usr/lib/x86_64-linux-gnu/perl5/5.30 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.30 /usr/share/perl/5.30 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libpython3.8-minimal:amd64 (3.8.5-1~20.04) ...
+Setting up libexpat1:amd64 (2.2.9-1build1) ...
+Setting up python3.8-minimal (3.8.5-1~20.04) ...
+Selecting previously unselected package python3-minimal.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4460 files and directories currently installed.)
+Preparing to unpack .../0-python3-minimal_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking python3-minimal (3.8.2-0ubuntu2) ...
+Selecting previously unselected package mime-support.
+Preparing to unpack .../1-mime-support_3.64ubuntu1_all.deb ...
+Unpacking mime-support (3.64ubuntu1) ...
+Selecting previously unselected package libmpdec2:amd64.
+Preparing to unpack .../2-libmpdec2_2.4.2-3_amd64.deb ...
+Unpacking libmpdec2:amd64 (2.4.2-3) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../3-readline-common_8.0-4_all.deb ...
+Unpacking readline-common (8.0-4) ...
+Selecting previously unselected package libreadline8:amd64.
+Preparing to unpack .../4-libreadline8_8.0-4_amd64.deb ...
+Unpacking libreadline8:amd64 (8.0-4) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../5-libsqlite3-0_3.31.1-4ubuntu0.2_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) ...
+Selecting previously unselected package libpython3.8-stdlib:amd64.
+Preparing to unpack .../6-libpython3.8-stdlib_3.8.5-1~20.04_amd64.deb ...
+Unpacking libpython3.8-stdlib:amd64 (3.8.5-1~20.04) ...
+Selecting previously unselected package python3.8.
+Preparing to unpack .../7-python3.8_3.8.5-1~20.04_amd64.deb ...
+Unpacking python3.8 (3.8.5-1~20.04) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../8-libpython3-stdlib_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.8.2-0ubuntu2) ...
+Setting up python3-minimal (3.8.2-0ubuntu2) ...
+Selecting previously unselected package python3.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4890 files and directories currently installed.)
+Preparing to unpack .../python3_3.8.2-0ubuntu2_amd64.deb ...
+Unpacking python3 (3.8.2-0ubuntu2) ...
+Selecting previously unselected package libmagic-mgc.
+Preparing to unpack .../libmagic-mgc_1%3a5.38-4_amd64.deb ...
+Unpacking libmagic-mgc (1:5.38-4) ...
+Selecting previously unselected package libmagic1:amd64.
+Preparing to unpack .../libmagic1_1%3a5.38-4_amd64.deb ...
+Unpacking libmagic1:amd64 (1:5.38-4) ...
+Selecting previously unselected package file.
+Preparing to unpack .../file_1%3a5.38-4_amd64.deb ...
+Unpacking file (1:5.38-4) ...
+Selecting previously unselected package xz-utils.
+Preparing to unpack .../xz-utils_5.2.4-1ubuntu1_amd64.deb ...
+Unpacking xz-utils (5.2.4-1ubuntu1) ...
+Setting up mime-support (3.64ubuntu1) ...
+Setting up libmagic-mgc (1:5.38-4) ...
+Setting up libsqlite3-0:amd64 (3.31.1-4ubuntu0.2) ...
+Setting up libmagic1:amd64 (1:5.38-4) ...
+Setting up file (1:5.38-4) ...
+Setting up xz-utils (5.2.4-1ubuntu1) ...
+update-alternatives: using /usr/bin/xz to provide /usr/bin/lzma (lzma) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzma.1.gz because associated file /usr/share/man/man1/xz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/unlzma.1.gz because associated file /usr/share/man/man1/unxz.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcat.1.gz because associated file /usr/share/man/man1/xzcat.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzmore.1.gz because associated file /usr/share/man/man1/xzmore.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzless.1.gz because associated file /usr/share/man/man1/xzless.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzdiff.1.gz because associated file /usr/share/man/man1/xzdiff.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzcmp.1.gz because associated file /usr/share/man/man1/xzcmp.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzgrep.1.gz because associated file /usr/share/man/man1/xzgrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzegrep.1.gz because associated file /usr/share/man/man1/xzegrep.1.gz (of link group lzma) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/lzfgrep.1.gz because associated file /usr/share/man/man1/xzfgrep.1.gz (of link group lzma) doesn't exist
+Setting up libmpdec2:amd64 (2.4.2-3) ...
+Setting up readline-common (8.0-4) ...
+Setting up libreadline8:amd64 (8.0-4) ...
+Setting up libpython3.8-stdlib:amd64 (3.8.5-1~20.04) ...
+Setting up python3.8 (3.8.5-1~20.04) ...
+Setting up libpython3-stdlib:amd64 (3.8.2-0ubuntu2) ...
+Setting up python3 (3.8.2-0ubuntu2) ...
+running python rtupdate hooks for python3.8...
+running python post-rtupdate hooks for python3.8...
+Processing triggers for libc-bin (2.31-0ubuntu9) ...
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 8%Reading package lists... 27%Reading package lists... 78%Reading package lists... 78%Reading package lists... 79%Reading package lists... 79%Reading package lists... 80%Reading package lists... 84%Reading package lists... 84%Reading package lists... 85%Reading package lists... 85%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 91%Reading package lists... 94%Reading package lists... 94%Reading package lists... 95%Reading package lists... 95%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... 96%Building dependency tree       
+Reading state information... 0%Reading state information... 4%Reading state information... Done
+The following NEW packages will be installed:
+  stress
+0 upgraded, 1 newly installed, 0 to remove and 25 not upgraded.
+Need to get 18.4 kB of archives.
+After this operation, 55.3 kB of additional disk space will be used.
+0% [Working]            Get:1 http://archive.ubuntu.com/ubuntu focal/universe amd64 stress amd64 1.0.4-6 [18.4 kB]
+0% [1 stress 0 B/18.4 kB 0%]                            100% [Working]              Fetched 18.4 kB in 1s (30.7 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package stress.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4993 files and directories currently installed.)
+Preparing to unpack .../stress_1.0.4-6_amd64.deb ...
+Unpacking stress (1.0.4-6) ...
+Setting up stress (1.0.4-6) ...
+Running packet flooder
+PING netflix.com (52.212.172.106) 56(84) bytes of data.
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+--- netflix.com ping statistics ---
+1500 packets transmitted, 0 received, 100% packet loss, time 24004ms
+

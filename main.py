@@ -74,10 +74,11 @@ class Main:
 		#os.system("gnome-terminal -- python include/container_data_management.py "+str(self.__refresh_time)+" "+str(self.__number_of_loops))
 		time.sleep(2)
 		deploy(1)
+		time.sleep(1)
 		
 	def __del__(self):		
 		print("Thank you.")
-		#gc.collect()
+		#
 		
 	def __run_systems(self,file_location,output_location,fl):
 		#print("Started "+file_location[:len(file_location)-3])
@@ -119,7 +120,8 @@ class Main:
 		
 
 if __name__ == "__main__": 
-	production_version=False
+	production_version=True
 	obj=Main(production_version)
+	gc.collect()
 else:
 	print("Something is wrong, please check main.py")

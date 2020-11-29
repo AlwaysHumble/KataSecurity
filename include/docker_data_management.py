@@ -82,7 +82,7 @@ class docker_data_management:
 		
 	#Clear data folder to store fresh data	
 	def __setup_data_folder(self):
-		os.system("mkdir data/docker")
+		#os.system("mkdir data/docker")
 		os.system("mkdir data/docker/snapshots")
 		
 	def __del__(self):
@@ -94,4 +94,5 @@ class docker_data_management:
 if __name__ == "__main__":
 	docker_management_obj=docker_data_management(int(sys.argv[1]),int(sys.argv[2]))#time update data base is send by the main.py
 else:
-	print("Docker Data Management System could not be initialized\nPlease check docker_data_management.py")
+	print("")
+	#print("Docker Data Management System could not be initialized\nPlease check docker_data_management.py")
